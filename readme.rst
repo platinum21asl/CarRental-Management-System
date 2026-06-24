@@ -1,70 +1,198 @@
-###################
-What is CodeIgniter
-###################
+# Car Rental Management System
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+A web-based Car Rental Management System built with CodeIgniter 3 (CI3) to manage vehicle rentals, customer data, booking transactions, and rental operations efficiently.
 
-*******************
-Release Information
-*******************
+## Overview
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+This project was developed to simplify car rental business processes by providing an integrated system for managing vehicles, customers, and rental transactions through a centralized web application.
 
-**************************
-Changelog and New Features
-**************************
+The application is built using the MVC architecture provided by CodeIgniter 3, ensuring maintainability, scalability, and clean code organization.
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+---
 
-*******************
-Server Requirements
-*******************
+## Features
 
-PHP version 5.6 or newer is recommended.
+* Vehicle Management
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+  * Add, edit, update, and delete vehicle data
+  * Manage vehicle availability status
 
-************
-Installation
-************
+* Customer Management
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+  * Register and manage customer information
+  * View customer rental history
 
-*******
-License
-*******
+* Rental Transactions
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+  * Create rental orders
+  * Manage vehicle borrowing and returning
+  * Calculate rental costs
 
-*********
-Resources
-*********
+* Administrative Dashboard
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+  * Monitor rental activities
+  * Manage operational data
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+* Database Integration
 
-***************
-Acknowledgement
-***************
+  * MySQL database support
+  * Structured relational data management
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+---
+
+## Technology Stack
+
+### Backend
+
+* PHP
+* CodeIgniter 3
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Database
+
+* MySQL
+
+### Development Tools
+
+* Composer
+* Apache / XAMPP
+
+---
+
+## Project Structure
+
+```bash
+CarRental-Management-System/
+│
+├── application/
+├── assets/
+├── system/
+├── user_guide/
+│
+├── rental_mobil.sql
+├── composer.json
+├── index.php
+└── .htaccess
+```
+
+## Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/platinum21asl/CarRental-Management-System.git
+```
+
+### 2. Move to Project Directory
+
+```bash
+cd CarRental-Management-System
+```
+
+### 3. Create Database
+
+Create a new MySQL database:
+
+```sql
+CREATE DATABASE rental_mobil;
+```
+
+### 4. Import Database
+
+Import the provided SQL file:
+
+```bash
+rental_mobil.sql
+```
+
+### 5. Configure Database
+
+Open:
+
+```bash
+application/config/database.php
+```
+
+Update database credentials:
+
+```php
+$db['default'] = array(
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'rental_mobil',
+    'dbdriver' => 'mysqli'
+);
+```
+
+### 6. Configure Base URL
+
+Open:
+
+```bash
+application/config/config.php
+```
+
+Update:
+
+```php
+$config['base_url'] = 'http://localhost/CarRental-Management-System/';
+```
+
+### 7. Run Application
+
+Start Apache and MySQL through XAMPP or Laragon, then access:
+
+```bash
+http://localhost/CarRental-Management-System
+```
+
+---
+
+## Screenshots
+
+Add screenshots of:
+
+* Dashboard
+* Vehicle Management
+* Customer Management
+* Rental Transaction
+* Reports
+
+Example:
+
+```markdown
+![Dashboard](docs/dashboard.png)
+```
+
+---
+
+## Future Improvements
+
+* Online booking system
+* Payment gateway integration
+* Vehicle maintenance tracking
+* Email notifications
+* Reporting and analytics dashboard
+* REST API integration
+* Multi-user role management
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Developed by Daniel Renato.
+
+GitHub:
+https://github.com/platinum21asl
